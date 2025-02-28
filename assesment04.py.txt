@@ -1,0 +1,65 @@
+import turtle
+
+# Set up the screen
+screen = turtle.Screen()
+screen.bgcolor("white")
+
+# Set up the turtle
+neymar = turtle.Turtle()
+neymar.shape("turtle")
+neymar.speed(3)
+
+# Function to draw a circle (used for head)
+def draw_circle(color, radius, x, y):
+    neymar.penup()
+    neymar.goto(x, y)
+    neymar.pendown()
+    neymar.begin_fill()
+    neymar.fillcolor(color)
+    neymar.circle(radius)
+    neymar.end_fill()
+
+# Function to draw eyes
+def draw_eye(x, y):
+    draw_circle("black", 10, x, y)
+
+# Function to draw the mouth
+def draw_mouth():
+    neymar.penup()
+    neymar.goto(-40, -20)
+    neymar.pendown()
+    neymar.setheading(-60)
+    neymar.circle(50, 120)
+
+# Draw face (head)
+draw_circle("peachpuff", 100, 0, -100)
+
+# Draw eyes
+draw_eye(-35, 50)  # Left eye
+draw_eye(35, 50)   # Right eye
+
+# Draw mouth
+draw_mouth()
+
+# Draw hair (simplified version)
+def draw_hair():
+    neymar.penup()
+    neymar.goto(-60, 70)
+    neymar.pendown()
+    neymar.setheading(90)
+    neymar.circle(60, 180)
+
+    neymar.penup()
+    neymar.goto(60, 70)
+    neymar.pendown()
+    neymar.setheading(90)
+    neymar.circle(-60, 180)
+
+# Draw hair
+draw_hair()
+
+# Finish
+neymar.hideturtle()
+
+# Keep the window open
+turtle.done()

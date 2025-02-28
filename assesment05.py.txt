@@ -1,0 +1,24 @@
+import turtle
+
+# Set up the screen
+screen = turtle.Screen()
+screen.bgcolor("white")
+
+# Set up the turtle
+batman = turtle.Turtle()
+batman.shape("turtle")
+batman.color("black")
+batman.penup()
+
+# Move the turtle to start position
+batman.goto(-150, 0)
+batman.pendown()
+
+# Write "I AM BATMAN"
+batman.write("I AM BATMAN", font=("Arial", 36, "bold"))
+
+# Hide the turtle after writing
+batman.hideturtle()
+
+# Keep the window open
+turtle.done()
